@@ -21,4 +21,8 @@ export class ContactPage {
 
   }
 
+  clicked($event) {
+    console.log('padre: '+ $event.name + ' - ' + $event.speaker);
+  }
+
 }

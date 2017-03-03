@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 
 @Component({
@@ -10,6 +10,8 @@ export class TalkRowComponent implements OnInit {
 
   @Input() talk;
   @Input() index: number;
+
+  @Output() charlaPulsada = new EventEmitter<any>();
 
   constructor() {
     // Los input no existen en el constructor
@@ -28,6 +30,11 @@ export class TalkRowComponent implements OnInit {
       'padding-left': '10px',
       'margin-bottom': '20px'
     }
+  }
+
+  click($event){
+    console.log(`hijo: ${event}`);
+    this.charlaPulsada.emit(this.talk);
   }
 
 }

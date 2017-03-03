@@ -8,6 +8,6 @@
 
 <ion-content padding>
 
-  <talk-row *ngFor="let talk of talks; let i = index" [talk]="talk" [index]="i"></talk-row>
+  <talk-row *ngFor="let talk of talks; let i = index" [talk]="talk" [index]="i" (charlaPulsada)="clicked($event)"></talk-row>
 
 </ion-content>
