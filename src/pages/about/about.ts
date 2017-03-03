@@ -12,9 +12,16 @@ import {TalkService} from "../../providers/talk-service";
 export class AboutPage {
 
   talks: Array<Talk>;
+  name: string = "name";
+  speaker: string = "speaker";
 
   constructor(public navCtrl: NavController, public talkService: TalkService) {
     talkService.getAllTalks().subscribe(x => this.talks = x);
+  }
+
+  imprimir(){
+    console.log(this.name);
+    console.log(this.speaker);
   }
 
 }

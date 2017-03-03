@@ -7,6 +7,13 @@
 </ion-header>
 
 <ion-content padding>
+  <input type="text" [(ngModel)]="name">
+  <input type="text" [(ngModel)]="speaker">
+  <div></div>
+  <button ion-button (click)="imprimir()">Imprimir</button>
+
+  <div style="border: 1px solid"></div>
+
   <div *ngFor="let talk of talks; let i = index">
     <p>{{i+1}}) - {{talk.name}} - {{talk.speaker}}</p>
     <div style="border: 1px solid red" *ngIf="i != talks.length-1"></div>
