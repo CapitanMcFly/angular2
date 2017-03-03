@@ -6,6 +6,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { TalkService } from '../providers/talk-service';
+import { TalkRowComponent } from '../components/talk-row/talk-row';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TalkService } from '../providers/talk-service';
     AboutPage,
     ContactPage,
     HomePage,
-    TabsPage
+    TabsPage,
+    TalkRowComponent
   ],
   imports: [
     IonicModule.forRoot(MyApp)
