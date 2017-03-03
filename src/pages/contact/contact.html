@@ -8,6 +8,14 @@
 
 <ion-content padding>
 
+  <form #formulario="ngForm" (submit)="onSubmit(formulario.value)">
+    <input type="text" name="name" ngModel required minlength="3" maxlength="8">
+    <input type="text" name="speaker" ngModel required minlength="4" maxlength="7">
+    <button type="submit" [disabled]="formulario.form.invalid">Botón</button>
+  </form>
+
+  <div padding></div>
+
   <talk-row *ngFor="let talk of talks; let i = index" [talk]="talk" [index]="i" (charlaPulsada)="clicked($event)"></talk-row>
 
 </ion-content>

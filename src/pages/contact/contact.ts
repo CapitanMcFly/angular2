@@ -25,4 +25,8 @@ export class ContactPage {
     console.log('padre: '+ $event.name + ' - ' + $event.speaker);
   }
 
+  onSubmit(formulario){
+    console.log(formulario);
+  }
+
 }
