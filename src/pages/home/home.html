@@ -5,6 +5,18 @@
 </ion-header>
 
 <ion-content padding>
+
+  <div *ngFor="let talk of talks; let i = index" [ngStyle] = "grande">
+    <p>{{i+1}}) - {{talk.name}} - {{talk.speaker}}</p>
+    <div style="border: 1px solid red" *ngIf="i != talks.length-1"></div>
+  </div>
+
+  <p>--------------------------------------</p>
+
+  <p [textContent]="talk.name" [style.color]="color()" (click)="onClickMe($event)"></p>
+  <p [ngStyle] = "estilo">{{talk.speaker}}</p>
+  <input type="text" #name (keyup)="onKey(name.value, $event)" (click)="onClickMe($event)">
+
   <h2>Welcome to Ionic!</h2>
   <p>
     This starter project comes with simple tabs-based layout for apps
