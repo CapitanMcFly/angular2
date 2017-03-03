@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 import { NavController } from 'ionic-angular';
 
-class Talk {
+export class Talk {
   constructor(public name, public speaker){
   }
 }
